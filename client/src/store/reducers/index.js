@@ -1,6 +1,8 @@
-import {combineReducers} from 'redux';
-import customerReducer from './customer';
+import { combineReducers } from "redux";
+import addressReducer from "./address";
+import searchReducer from "./search";
 
 export default combineReducers({
-  customers: customerReducer
-})
+  address: addressReducer,
+  transactions: searchReducer
+});

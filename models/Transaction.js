@@ -5,10 +5,7 @@ const mongoose = require("mongoose"),
 const TransactionSchema = new Schema({
   blockNumber: String,
   timeStamp: String,
-  hash: {
-    type: String,
-    unique: true
-  },
+  hash: { type: String, sparse: true },
   nonce: String,
   blockHash: String,
   transactionIndex: String,
@@ -23,10 +20,9 @@ const TransactionSchema = new Schema({
   contractAddress: String,
   cumulativeGasUsed: String,
   gasUsed: String,
-  confirmations: String,
-  balance: String
+  confirmations: String
 });
 
-const transactionModel = mongoose.model("Transaction", TransactionSchema);
+const Transaction = mongoose.model("transaction", TransactionSchema);
 
-module.exports = transactionModel;
+module.exports = Transaction;

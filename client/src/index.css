@@ -1,5 +1,32 @@
-bodu {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #637381;
+  font-weight: 400;
+}
+
+.primary-color {
+  color: #5c6ac4;
+}
+
+.secondary-color {
+  color: #212535;
+}
+
+.secondary-background {
+  background-color: #f4f6f8;
+}
+
+.pt-8 {
+  padding-top: 80px;
+}
+
+@media only screen and (max-width: 988px) {
+  .primary-color,
+  .secondary-color {
+    color: white;
+  }
 }

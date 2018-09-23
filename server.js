@@ -1,13 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+var cors = require("cors");
 
+const transaction = require("./routes/api/transactions");
 //init
 const app = express();
 
 //database-config
 const db = require("./config/keys").mongoURI;
 
+app.use(cors());
 //bodyParser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -21,7 +24,8 @@ mongoose
 app.get("/", (req, res) => res.send("Hello from database land"));
 
 //set up routes
-app.use(require("./routes"));
+//app.use(require("./routes"));
+app.use("/api/address", transaction);
 
 //fire it up!
 const port = process.env.PORT || 5000;
