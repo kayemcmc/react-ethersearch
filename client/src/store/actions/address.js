@@ -20,7 +20,7 @@ export const fetchTransactions = id => dispatch => {
     .then(res =>
       dispatch({
         type: FETCH_TRANSACTIONS,
-        payload: res
+        payload: res.data.result
       })
     )
     .catch(err => console.error(err));

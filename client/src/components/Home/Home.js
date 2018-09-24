@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import HomeHeader from "./HomeHeader";
 import Search from "../Search/Search";
 import HomeArchieveTrx from "./HomeArchieveTrx";
+import Popup from "reactjs-popup";
 
 export default () => {
   return (

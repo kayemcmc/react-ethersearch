@@ -22,7 +22,7 @@ class HomeArchieveTrx extends Component {
       <section className="text-center">
         <ul className="list-group">
           <li className="list-group-item  text-center">
-            <Feedtitle>Transaction Details Shown Bellow</Feedtitle>
+            <Feedtitle>Transactions in Database</Feedtitle>
           </li>
           {map(this.props.transactions, (transaction, key) => (
             <li
