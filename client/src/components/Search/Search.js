@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 import map from "lodash/map";
 import { fetchTransactions } from "../../store/actions/address";
-import Modal from "../common/Modal";
 import Popup from "reactjs-popup";
 class Search extends Component {
   constructor(props) {
